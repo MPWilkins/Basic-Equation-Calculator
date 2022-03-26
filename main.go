@@ -5,8 +5,21 @@ import (
 	math
 )
 
-// Basic fraction formula, something along lines of a/b +/- c/d
+// Basic fraction formula, something along lines of a/b +/- cd
 func fraction() float32 {
+
+}
+
+// Pre Alegbra/ Elementary Algebra functions
+func average() float32 {
+
+}
+
+func probability() float32 {
+
+}
+
+func quadraticFormula() float32 {
 
 }
 
