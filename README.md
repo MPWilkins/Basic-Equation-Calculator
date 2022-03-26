@@ -1,0 +1,1 @@
+Made with the purpose of giving the answer to 16 core math equations that may be found in the ACT while studying to check if your answer is correct. Fractions are further added in the case of lower level fractions are used in comparing values and/or transitions from different value states. 
