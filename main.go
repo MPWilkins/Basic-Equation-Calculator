@@ -5,6 +5,11 @@ import (
 	math
 )
 
+// Basic fraction formula, something along lines of a/b +/- c/d
+func fraction() float32 {
+
+}
+
 
 /* Main will be used to call each section as necessary ranging from:
 1. Pre-Algebra / Elementary Algebra
