@@ -12,6 +12,8 @@ func fractionSimplifier() {
 	var a, b, c, d int
 	var sign string
 
+	var e int
+
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
 	fmt.Print("A: ")
 	fmt.Scanf("%d", &a)
@@ -22,7 +24,11 @@ func fractionSimplifier() {
 	fmt.Print("D: ")
 	fmt.Scanf("%d", &d)
 	fmt.Print("Addition or Subtraction: ")
-	fmt.Scanf(&sign)
+	fmt.Scanf("%s", &sign)
+
+	// e = a/b
+
+	// fmt.Println(e)
 }
 
 // Pre Alegbra/ Elementary Algebra functions
