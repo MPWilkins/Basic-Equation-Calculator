@@ -5,6 +5,8 @@ import (
 	//"math"
 )
 
+// Documentation help: https://pkg.go.dev/fmt
+
 // Basic fraction simplifier formula, something along lines of a/b +/- cd
 func fractionSimplifier() {
 	var a, b, c, d int
@@ -12,18 +14,19 @@ func fractionSimplifier() {
 
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
 	fmt.Print("A: ")
-	fmt.Scan(&a)
+	fmt.Scanf("%d", &a)
 	fmt.Print("B: ")
-	fmt.Scan(&b)
+	fmt.Scanf("%d", &b)
 	fmt.Print("C: ")
-	fmt.Scan(&c)
+	fmt.Scanf("%d", &c)
 	fmt.Print("D: ")
-	fmt.Scan(&d)
+	fmt.Scanf("%d", &d)
 	fmt.Print("Addition or Subtraction: ")
-	fmt.Scan(&sign)
+	fmt.Scanf(&sign)
 }
 
 // Pre Alegbra/ Elementary Algebra functions
+// Will use %g for floats
 func average() {
 
 }
