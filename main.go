@@ -9,10 +9,8 @@ import (
 
 // Basic fraction simplifier formula, something along lines of a/b +/- cd
 func fractionSimplifier() {
-	var a, b, c, d int
+	var a, b, c, d, e, f int
 	var sign string
-
-	var e, f, g, h int
 
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
 	fmt.Print("A: ")
@@ -32,13 +30,15 @@ func fractionSimplifier() {
 		c = c * b
 		e = b * d
 		
+		f = a - c
+
+		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
 
 	case "+":
 		a = a * d
 		c = c * b
 		e = b * d
 
-		
 	} 
 
 	// fmt.Println(e)
