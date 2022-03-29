@@ -39,6 +39,9 @@ func fractionSimplifier() {
 		c = c * b
 		e = b * d
 
+		f = a + c
+
+		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
 	} 
 
 	// fmt.Println(e)
