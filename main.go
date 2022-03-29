@@ -28,10 +28,15 @@ func fractionSimplifier() {
 
 	switch sign {
 	case "-":
-
+		a = a * d
+		c = c * b
+		e = b * d
+		
 
 	case "+":
-
+		a = a * d
+		c = c * b
+		e = b * d
 
 		
 	} 
