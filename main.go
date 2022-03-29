@@ -12,7 +12,7 @@ func fractionSimplifier() {
 	var a, b, c, d int
 	var sign string
 
-	var e int
+	var e, f, g, h int
 
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
 	fmt.Print("A: ")
@@ -23,10 +23,18 @@ func fractionSimplifier() {
 	fmt.Scanf("%d", &c)
 	fmt.Print("D: ")
 	fmt.Scanf("%d", &d)
-	fmt.Print("Addition or Subtraction: ")
+	fmt.Print("Addition(+) or Subtraction(-): ")
 	fmt.Scanf("%s", &sign)
 
-	// e = a/b
+	switch sign {
+	case "-":
+
+
+	case "+":
+
+
+		
+	} 
 
 	// fmt.Println(e)
 }
