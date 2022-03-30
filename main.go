@@ -8,6 +8,7 @@ import (
 // Documentation help: https://pkg.go.dev/fmt
 
 // Basic fraction simplifier formula, something along lines of a/b +/- cd
+// If the denomiator is 1 as the end of the math solution, then remove the denominator.
 func fractionSimplifier() {
 	var a, b, c, d, e, f int
 	var sign string
