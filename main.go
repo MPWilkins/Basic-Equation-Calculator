@@ -21,7 +21,7 @@ func fractionSimplifier() {
 	fmt.Scanf("%d", &c)
 	fmt.Print("D: ")
 	fmt.Scanf("%d", &d)
-	fmt.Print("Addition(+) or Subtraction(-): ")
+	fmt.Print("Addition(+) or Subtraction(-). Use the respective sign: ")
 	fmt.Scanf("%s", &sign)
 
 	switch sign {
@@ -42,9 +42,10 @@ func fractionSimplifier() {
 		f = a + c
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
-	} 
 
-	// fmt.Println(e)
+	default:
+		fmt.Println("Invalid Input. Please use a + or - sign.")
+	} 
 }
 
 // Pre Alegbra/ Elementary Algebra functions
