@@ -10,7 +10,7 @@ import (
 // Basic fraction simplifier formula, something along lines of a/b +/- cd
 // If the denomiator is 1 as the end of the math solution, then remove the denominator after it is simplified.
 func fractionSimplifier() {
-	var a, b, c, d, e, f int
+	var a, b, c, d, e, f
 	var sign string
 
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
@@ -25,6 +25,9 @@ func fractionSimplifier() {
 	fmt.Print("Addition(+) or Subtraction(-). Use the respective sign: ")
 	fmt.Scanf("%s", &sign)
 
+	// 1. Find a method to find the Great Common Denominator
+	// search for proper contol input type validation.
+	
 	switch sign {
 	case "-":
 		a = a * d
@@ -32,6 +35,7 @@ func fractionSimplifier() {
 		e = b * d
 		
 		f = a - c
+
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
 
