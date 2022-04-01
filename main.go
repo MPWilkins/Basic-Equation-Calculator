@@ -9,8 +9,17 @@ import (
 
 // Basic fraction simplifier formula, something along lines of a/b +/- cd
 // If the denomiator is 1 as the end of the math solution, then remove the denominator after it is simplified.
+// Greatest Common Denominator
+func gcd(a, b int) int {
+	if b == 0 {
+		return a
+	}
+	return gcd(b, a%b)
+}
+
+
 func fractionSimplifier() {
-	var a, b, c, d, e, f
+	var a, b, c, d, e, f int
 	var sign string
 
 	fmt.Println("Enter numbers for the following format: A/B +/- C/D")
@@ -36,8 +45,11 @@ func fractionSimplifier() {
 		
 		f = a - c
 
+		x := gcd(f, e)
+
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
+		fmt.Printf("\nAfter Simplifying the answer is: %d/%d", f/x, e/x)
 
 	case "+":
 		a = a * d
@@ -46,7 +58,11 @@ func fractionSimplifier() {
 
 		f = a + c
 
+		x := gcd(f, e)
+
+
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
+		fmt.Printf("\nAfter Simplifying the answer is: %d/%d", f/x, e/x)
 
 	default:
 		fmt.Println("Invalid Input. Please use a + or - sign.")
@@ -75,4 +91,6 @@ func quadraticFormula() {
 4. Trigonometry */
 func main() {
 	fractionSimplifier()
+	// x := gcd(3, 9)
+	// fmt.Println(x)
 }
