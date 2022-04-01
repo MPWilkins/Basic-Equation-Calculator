@@ -7,8 +7,6 @@ import (
 
 // Documentation help: https://pkg.go.dev/fmt
 
-// Basic fraction simplifier formula, something along lines of a/b +/- cd
-// If the denomiator is 1 as the end of the math solution, then remove the denominator after it is simplified.
 // Greatest Common Denominator
 func gcd(a, b int) int {
 	if b == 0 {
@@ -17,7 +15,7 @@ func gcd(a, b int) int {
 	return gcd(b, a%b)
 }
 
-
+// Basic fraction simplifier formula, something along lines of a/b +/- c/d
 func fractionSimplifier() {
 	var a, b, c, d, e, f int
 	var sign string
@@ -34,9 +32,8 @@ func fractionSimplifier() {
 	fmt.Print("Addition(+) or Subtraction(-). Use the respective sign: ")
 	fmt.Scanf("%s", &sign)
 
-	// 1. Find a method to find the Great Common Denominator
 	// search for proper contol input type validation.
-	
+	// Put in scenario for when the value is negative
 	switch sign {
 	case "-":
 		a = a * d
@@ -49,7 +46,7 @@ func fractionSimplifier() {
 
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
-		fmt.Printf("\nAfter Simplifying the answer is: %d/%d", f/x, e/x)
+		fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", x, f/x, e/x)
 
 	case "+":
 		a = a * d
@@ -62,7 +59,7 @@ func fractionSimplifier() {
 
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
-		fmt.Printf("\nAfter Simplifying the answer is: %d/%d", f/x, e/x)
+		fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", x, f/x, e/x)
 
 	default:
 		fmt.Println("Invalid Input. Please use a + or - sign.")
@@ -71,17 +68,17 @@ func fractionSimplifier() {
 
 // Pre Alegbra/ Elementary Algebra functions
 // Will use %g for floats
-func average() {
+// func average() {
 
-}
+// }
 
-func probability() {
+// func probability() {
 
-}
+// }
 
-func quadraticFormula() {
+// func quadraticFormula() {
 
-}
+// }
 
 
 /* Main will be used to call each section as necessary ranging from:
@@ -91,6 +88,5 @@ func quadraticFormula() {
 4. Trigonometry */
 func main() {
 	fractionSimplifier()
-	// x := gcd(3, 9)
-	// fmt.Println(x)
+
 }
