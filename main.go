@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	//"math"
+	// "math"
 )
 
 // Documentation help: https://pkg.go.dev/fmt
@@ -42,11 +42,32 @@ func fractionSimplifier() {
 		
 		f = a - c
 
+		fmt.Println("The first f is = to: ", f)
+
 		x := gcd(f, e)
+
+		fmt.Println("X is = to: ", x)
+
+		y := f / e
+
+		fmt.Println("Y is = to: ", y)
+
+		f := f - (y * e)
+
+		fmt.Println("The first f is = to: ", f)
 
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
-		fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", x, f/x, e/x)
+
+		if e < 0 {
+			f := f * -1
+			e := e * -1
+			
+			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, f/x, e/x)
+		} else {
+			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, f/x, e/x)
+		}
+		
 
 	case "+":
 		a = a * d
@@ -57,9 +78,13 @@ func fractionSimplifier() {
 
 		x := gcd(f, e)
 
+		y := f / e
+
+		f := f - (y * e)
+
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
-		fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", x, f/x, e/x)
+		fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d\n", y, f/x, e/x)
 
 	default:
 		fmt.Println("Invalid Input. Please use a + or - sign.")
