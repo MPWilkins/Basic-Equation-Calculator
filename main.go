@@ -42,30 +42,25 @@ func fractionSimplifier() {
 		
 		f = a - c
 
-		fmt.Println("The first f is = to: ", f)
-
 		x := gcd(f, e)
-
-		fmt.Println("X is = to: ", x)
-
 		y := f / e
-
-		fmt.Println("Y is = to: ", y)
-
 		f := f - (y * e)
 
-		fmt.Println("The first f is = to: ", f)
+		newF := f / x
+		newE := e / x
 
 
 		fmt.Printf("Before Simplifying the answer is: %d/%d", f, e)
 
-		if e < 0 {
-			f := f * -1
-			e := e * -1
+		fmt.Println("The value of newF is: ", newF, " and newE is: ", newE)
+
+		if newE < 0 {
+			newF := f * -1
+			newE := e * -1
 			
-			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, f/x, e/x)
+			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, newF, newE)
 		} else {
-			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, f/x, e/x)
+			fmt.Printf("\nAfter Simplifying the answer is: %d %d/%d", y, newF, newE)
 		}
 		
 
