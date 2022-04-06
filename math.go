@@ -35,10 +35,16 @@ func fractionSimplifier() {
 	fmt.Print("Enter sign: (ie: +, -, *, /) ")
 	fmt.Scanf("%s", &sign)
 
-	// search for proper contol input type validation.
-	// Put in scenario for when the value is negative
 	switch sign {
 	case "+":
+		// Find active LCD
+		active_lcd := lcd(denom1, denom2)
+		fmt.Println("LCD: ", active_lcd)
+		// Find the adjusted numerators that work along with the LCD via multiplication
+		 frac1 := numer1 * (active_lcd / denom1)
+		 frac2 := numer2 * (active_lcd / denom2)
+		 // Verification check
+		 fmt.Println("Fraction 1: ", frac1, "Fraction 2: ", frac2)
 	case "-":
 	case "*":
 	case "/":
