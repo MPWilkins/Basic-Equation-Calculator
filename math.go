@@ -57,6 +57,12 @@ func fractionSimplifier() {
 		reduced_denominator := active_lcd / reduced_frac_by 
 		// Verification check
 		fmt.Println("After reduction: ", reduced_numerator, "/", reduced_denominator)
+		// Convert to mixed numbers
+		mixed_whole := reduced_numerator / reduced_denominator
+		fmt.Println("Mixed whole:", mixed_whole)
+		mixed_numerator := reduced_numerator % reduced_denominator
+		fmt.Println("Mixed Numerator", mixed_numerator)
+		// fmt.Println("The final answer: ", mixed_whole, " ", mixed_numerator, "/", active_lcd)
 	case "-":
 	case "*":
 	case "/":
