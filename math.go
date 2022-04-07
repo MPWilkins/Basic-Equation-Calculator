@@ -39,30 +39,29 @@ func fractionSimplifier() {
 	case "+":
 		// Find active LCD
 		active_lcd := lcd(denom1, denom2)
-		//  Verification Check
-		fmt.Println("LCD: ", active_lcd)
+		
 		// Find the adjusted numerators that work along with the LCD via multiplication
 		frac1 := numer1 * (active_lcd / denom1)
 		frac2 := numer2 * (active_lcd / denom2)
-		// Verification check
-		fmt.Println("Fraction 1: ", frac1, "Fraction 2: ", frac2)
-		// Verification check
-		fmt.Println("Current Fraction Equation: ", frac1, "/", active_lcd, " + ", frac2, "/", active_lcd)
 		frac_total := frac1 + frac2 
+
 		// Progression Check
 		fmt.Println("Current Fraction after addition: ", frac_total, "/", active_lcd)
+		
 		reduced_frac_by := gcd(frac_total, active_lcd)
-
 		reduced_numerator := frac_total / reduced_frac_by
 		reduced_denominator := active_lcd / reduced_frac_by 
-		// Verification check
-		fmt.Println("After reduction: ", reduced_numerator, "/", reduced_denominator)
+
 		// Convert to mixed numbers
 		mixed_whole := reduced_numerator / reduced_denominator
-		fmt.Println("Mixed whole:", mixed_whole)
 		mixed_numerator := reduced_numerator % reduced_denominator
-		fmt.Println("Mixed Numerator", mixed_numerator)
-		// fmt.Println("The final answer: ", mixed_whole, " ", mixed_numerator, "/", active_lcd)
+
+		// Solution if there is a whole number
+		if mixed_whole != 0 {
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator)
+		} else { // May be invalid with current output
+			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
+		}
 	case "-":
 	case "*":
 	case "/":
