@@ -56,11 +56,15 @@ func fractionSimplifier() {
 		mixed_whole := reduced_numerator / reduced_denominator
 		mixed_numerator := reduced_numerator % reduced_denominator
 
-		// Solution if there is a whole number
-		if mixed_whole != 0 {
+		// Solution if there is a whole number/ if the solution is a negative
+		if mixed_whole != 0 && mixed_whole > 0 {
 			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator)
-		} else { // May be invalid with current output
+		} else if mixed_whole == 0 && mixed_whole > 0 { // May be invalid with current output
 			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
+		} else if mixed_whole != 0 && mixed_whole < 0 {
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator * -1)
+		} else {
+			fmt.Println("Solution: ", reduced_numerator * -1, "/", reduced_denominator * -1)
 		}
 	case "-":
 	case "*":
