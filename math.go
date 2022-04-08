@@ -20,7 +20,7 @@ func lcd(a, b int) int {
 	return (a * b) / gcd(a, b)
 }
 
-// Basic fraction formula, something along lines of a/b +/-/* or / c/d
+// Basic fraction formula and simplification
 func fractionSimplifier() {
 	var numer1, numer2, denom1, denom2 int
 	var sign string
@@ -35,20 +35,26 @@ func fractionSimplifier() {
 	fmt.Print("Enter sign: (ie: +, -, *, /) ")
 	fmt.Scanf("%s", &sign)
 
+	// Check which sign was entered for method of simplification
 	switch sign {
 	case "+":
-		// Find active LCD
+		// Find the LCD of the denominators
 		active_lcd := lcd(denom1, denom2)
+		// Display the LCD being used.
+		fmt.Println("The Lowest Common Denominator is: ", active_lcd)
 		
-		// Find the adjusted numerators that work along with the LCD via multiplication
+		// Adjust numberators based on LCD
 		frac1 := numer1 * (active_lcd / denom1)
 		frac2 := numer2 * (active_lcd / denom2)
 		frac_total := frac1 + frac2 
 
 		// Progression Check
-		fmt.Println("Current Fraction after addition: ", frac_total, "/", active_lcd)
+		fmt.Println("Fraction after addition: ", frac_total, "/", active_lcd)
 		
+		// Fine the GCD of the fraction
 		reduced_frac_by := gcd(frac_total, active_lcd)
+
+		// Reduce the numerator and denominator by the GCD
 		reduced_numerator := frac_total / reduced_frac_by
 		reduced_denominator := active_lcd / reduced_frac_by 
 
