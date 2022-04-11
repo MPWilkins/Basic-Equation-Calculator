@@ -73,6 +73,45 @@ func fractionSimplifier() {
 			fmt.Println("Solution: ", reduced_numerator * -1, "/", reduced_denominator * -1)
 		}
 	case "-":
+		// Find the LCD of the denominators
+		active_lcd := lcd(denom1, denom2)
+		// Display the LCD being used.
+		fmt.Println("The Lowest Common Denominator is: ", active_lcd)
+		
+		// Adjust numberators based on LCD
+		frac1 := numer1 * (active_lcd / denom1)
+		frac2 := numer2 * (active_lcd / denom2)
+		// Subtract the numerators
+		frac_total := frac1 - frac2 
+
+		// Progression Check
+		fmt.Println("Fraction after subtraction: ", frac_total, "/", active_lcd)
+		
+		// Fine the GCD of the fraction
+		reduced_frac_by := gcd(frac_total, active_lcd)
+
+		// Reduce the numerator and denominator by the GCD
+		reduced_numerator := frac_total / reduced_frac_by
+		reduced_denominator := active_lcd / reduced_frac_by 
+
+		// Convert to mixed numbers
+		mixed_whole := reduced_numerator / reduced_denominator
+		mixed_numerator := reduced_numerator % reduced_denominator
+
+		// Solution if there is a whole number/ if the solution is a negative
+		if mixed_whole != 0 && mixed_whole > 0 {
+			//fmt.Println("Soulution 1")
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator)
+		} else if mixed_whole == 0 && mixed_whole > 0 { // May be invalid with current output
+			//fmt.Println("Soulution 2")
+			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
+		} else if mixed_whole != 0 && mixed_whole < 0 {
+			//fmt.Println("Soulution 3")
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator * 1, "/", reduced_denominator)
+		} else {
+			//fmt.Println("Soulution 4")
+			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
+		}
 	case "*":
 	case "/":
 	default:
