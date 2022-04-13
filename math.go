@@ -113,6 +113,20 @@ func fractionSimplifier() {
 			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
 		}
 	case "*":
+		// Find the total numerator and denominator
+		new_numerator := numer1 * numer2
+		new_denominator := denom1 * denom2
+
+		active_gcd := gcd(new_numerator, new_denominator)
+		// Progression Check
+		fmt.Println("The GCD is:", active_gcd)
+
+		// Reduce the numerator and denominator by the GCD
+		final_numerator := new_numerator / active_gcd
+		final_denominator := new_denominator / active_gcd
+
+		// Display fraction
+		fmt.Println("Solution: ", final_numerator, "/", final_denominator)
 	case "/":
 	default:
 		fmt.Println("Invalid sign, please try again.")
