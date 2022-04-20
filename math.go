@@ -125,8 +125,14 @@ func fractionSimplifier() {
 		final_numerator := new_numerator / active_gcd
 		final_denominator := new_denominator / active_gcd
 
+		// Convert to mixed numbers
+		mixed_whole := final_numerator / final_denominator
+		mixed_numerator := final_numerator % final_denominator
+
 		// Display fraction
-		fmt.Println("Solution: ", final_numerator, "/", final_denominator)
+		if mixed_whole != 0 && mixed_whole > 0 {
+		fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)} else {
+		fmt.Println("Solution: ", final_numerator, "/", final_denominator) }
 	case "/":
 	default:
 		fmt.Println("Invalid sign, please try again.")
