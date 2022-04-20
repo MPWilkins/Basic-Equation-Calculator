@@ -133,6 +133,8 @@ func fractionSimplifier() {
 		if mixed_whole != 0 && mixed_whole > 0 {
 		fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)} else {
 		fmt.Println("Solution: ", final_numerator, "/", final_denominator) }
+
+		// Work on include negatives in the solutions
 	case "/":
 	default:
 		fmt.Println("Invalid sign, please try again.")
