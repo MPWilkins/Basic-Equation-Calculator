@@ -109,7 +109,7 @@ func fractionSimplifier() {
 			//fmt.Println("Soulution 3")
 			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator * 1, "/", reduced_denominator)
 		} else {
-			//fmt.Println("Soulution 4")
+			//fmt.Println("Soulution 4") Duplicate of Solution 2?
 			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
 		}
 	case "*":
@@ -131,9 +131,12 @@ func fractionSimplifier() {
 
 		// Display fraction
 		if mixed_whole != 0 && mixed_whole > 0 {
-		fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)} else {
-		fmt.Println("Solution: ", final_numerator, "/", final_denominator) }
-
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)
+		} else if mixed_whole != 0 && mixed_whole < 0 {
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)
+		} else {
+			fmt.Println("Solution: ", final_numerator, "/", final_denominator)
+		}
 		// Work on include negatives in the solutions
 	case "/":
 	default:
