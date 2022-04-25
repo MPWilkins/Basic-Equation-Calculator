@@ -155,6 +155,10 @@ func fractionSimplifier() {
 		}
 		
 	case "/":
+		// Flip second fraction then multiply numerators and denominators
+		new_numerator := numer1 * denom2
+		new_denominator := denom1 * numer2
+
 	default:
 		fmt.Println("Invalid sign, please try again.")
 		fractionSimplifier()
