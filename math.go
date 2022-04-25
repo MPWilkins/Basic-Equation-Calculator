@@ -167,6 +167,10 @@ func fractionSimplifier() {
 		final_numerator := new_numerator / active_gcd
 		final_denominator := new_denominator / active_gcd
 
+		// Convert to mixed numbers
+		mixed_whole := final_numerator / final_denominator
+		mixed_numerator := final_numerator % final_denominator
+
 	default:
 		fmt.Println("Invalid sign, please try again.")
 		fractionSimplifier()
