@@ -159,6 +159,9 @@ func fractionSimplifier() {
 		new_numerator := numer1 * denom2
 		new_denominator := denom1 * numer2
 
+		active_gcd := gcd(new_numerator, new_denominator)
+		// Progression Check
+		fmt.Println("The GCD is:", active_gcd)
 	default:
 		fmt.Println("Invalid sign, please try again.")
 		fractionSimplifier()
