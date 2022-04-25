@@ -171,6 +171,21 @@ func fractionSimplifier() {
 		mixed_whole := final_numerator / final_denominator
 		mixed_numerator := final_numerator % final_denominator
 
+		if mixed_whole != 0 && mixed_whole > 0 {
+			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", final_denominator)
+		} else if mixed_whole != 0 && mixed_whole < 0 {
+			numerator_abs := abs(mixed_numerator)
+			denominator_abs := abs(final_denominator)
+			
+			fmt.Println("Solution: ", mixed_whole, " ", numerator_abs, "/", denominator_abs)
+		} else if mixed_whole == 0 && (final_denominator < 0 || final_numerator < 0) { 
+			numerator_abs := abs(mixed_numerator)
+			denominator_abs := abs(final_denominator)
+
+			fmt.Println("Solution: ", numerator_abs * -1, "/", denominator_abs)
+		} else {
+			fmt.Println("Solution: ", final_numerator, "/", final_denominator)
+		}
 	default:
 		fmt.Println("Invalid sign, please try again.")
 		fractionSimplifier()
