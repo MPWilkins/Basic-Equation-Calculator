@@ -162,6 +162,11 @@ func fractionSimplifier() {
 		active_gcd := gcd(new_numerator, new_denominator)
 		// Progression Check
 		fmt.Println("The GCD is:", active_gcd)
+
+		// Reduce the numerator and denominator by the GCD
+		final_numerator := new_numerator / active_gcd
+		final_denominator := new_denominator / active_gcd
+
 	default:
 		fmt.Println("Invalid sign, please try again.")
 		fractionSimplifier()
