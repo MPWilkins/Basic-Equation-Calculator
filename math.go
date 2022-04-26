@@ -192,7 +192,6 @@ func fractionSimplifier() {
 	} 
 }
 
-
 // Pre Alegbra/ Elementary Algebra functions
 // Will use %g for floats
 // func average() {
