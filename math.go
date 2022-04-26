@@ -194,9 +194,13 @@ func fractionSimplifier() {
 
 // Pre Alegbra/ Elementary Algebra functions
 // Will use %g for floats
-// func average() {
+func average() {
+	// Accept unknown number of entries
 
-// }
+	// Add all entries together
+
+	// Divide by number of entries
+}
 
 // func probability() {
 
