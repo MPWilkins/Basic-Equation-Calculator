@@ -49,7 +49,7 @@ func fractionSimplifier() {
 		// Find the LCD of the denominators
 		active_lcd := lcd(denom1, denom2)
 		// Display the LCD being used.
-		fmt.Println("The Lowest Common Denominator is: ", active_lcd)
+		// fmt.Println("The Lowest Common Denominator is: ", active_lcd)
 		
 		// Adjust numberators based on LCD
 		frac1 := numer1 * (active_lcd / denom1)
@@ -57,7 +57,7 @@ func fractionSimplifier() {
 		frac_total := frac1 + frac2 
 
 		// Progression Check
-		fmt.Println("Fraction after addition: ", frac_total, "/", active_lcd)
+		// fmt.Println("Fraction after addition: ", frac_total, "/", active_lcd)
 		
 		// Fine the GCD of the fraction
 		reduced_frac_by := gcd(frac_total, active_lcd)
@@ -73,12 +73,17 @@ func fractionSimplifier() {
 		// Solution if there is a whole number/ if the solution is a negative
 		if mixed_whole != 0 && mixed_whole > 0 {
 			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator)
-		} else if mixed_whole == 0 && mixed_whole > 0 { // May be invalid with current output
+		} else if mixed_whole == 0 && reduced_numerator > 0 {
 			fmt.Println("Solution: ", reduced_numerator, "/", reduced_denominator)
 		} else if mixed_whole != 0 && mixed_whole < 0 {
-			fmt.Println("Solution: ", mixed_whole, " ", mixed_numerator, "/", reduced_denominator * -1)
+			numerator_abs := abs(mixed_numerator)
+			denominator_abs := abs(reduced_denominator)
+
+			fmt.Println("Solution: ", mixed_whole, " ", numerator_abs, "/", denominator_abs)
 		} else {
-			fmt.Println("Solution: ", reduced_numerator * -1, "/", reduced_denominator * -1)
+			denominator_abs := abs(reduced_denominator)
+
+			fmt.Println("Solution: ", reduced_numerator, "/", denominator_abs)
 		}
 	case "-":
 		// Find the LCD of the denominators
@@ -193,8 +198,7 @@ func fractionSimplifier() {
 }
 
 // Pre Alegbra/ Elementary Algebra functions
-// Will use %g for floats
-// For the avverage we will allow a maximum of 50 entries
+// For the average allow a maximum of 50 entries
 func average() {
 	// Initialize variables
 	var entry_average float64
@@ -236,6 +240,25 @@ func average() {
 3. Plane Geometry
 4. Trigonometry */
 func main() {
-	fractionSimplifier()
+	var calc_choice int 
+	// Select which function to use:
+	fmt.Println("Which calculator would you like to use?")
+	fmt.Println("1. Fraction Calculator")
+	fmt.Println("2. Average Calculator")
+	fmt.Println("3. Probability Calculator")
+	fmt.Println("4. Quadratic Formula Calculator")
+	fmt.Println("5. Exit")
+	fmt.Scanln(&calc_choice)
 
+	switch calc_choice { 
+		case 1:
+			fractionSimplifier()
+		case 2:
+			average()
+		case 5:
+			fmt.Println("Exiting...")
+		default:
+			fmt.Println("Invalid choice, please try again.")
+			main()
+	}
 }
