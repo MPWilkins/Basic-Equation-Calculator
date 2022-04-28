@@ -194,13 +194,32 @@ func fractionSimplifier() {
 
 // Pre Alegbra/ Elementary Algebra functions
 // Will use %g for floats
+// For the avverage we will allow a maximum of 50 entries
 func average() {
-	// Accept unknown number of entries
+	// Initialize variables
+	var entry_average float64
+	var added_average float64
+	var num_enteries int
+
+	// Get the number of enteries
+	fmt.Println("How many items would you like to average? Select a number between 1 and 50.")
+	fmt.Scanln(&num_enteries)
 
 	// Add all entries together
-
-	// Divide by number of entries
+	if num_enteries > 50 || num_enteries <= 0 {
+		fmt.Println("Invalid number of enteries, please try again.")
+		average()
+	} else { 
+		for i := 0; i < num_enteries; i++ {
+			fmt.Println("Enter the next entry.")
+			fmt.Scanln(&entry_average)
+			added_average += entry_average
+		}
+		// Divide added_average by num_enteries
+		fmt.Println("The average is:", added_average / float64(num_enteries))
+	}
 }
+
 
 // func probability() {
 
