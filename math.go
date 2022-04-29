@@ -224,10 +224,18 @@ func average() {
 	}
 }
 
+func probability() {
+	// Get user input for probability and number of trials
+	var probability float64
+	var num_trials int
 
-// func probability() {
+	// Take input of probability?
+	fmt.Println("What is the probability of success?")
 
-// }
+	fmt.Scanln(&probability)
+
+	// take input of trials
+}
 
 // func quadraticFormula() {
 
@@ -255,6 +263,8 @@ func main() {
 			fractionSimplifier()
 		case 2:
 			average()
+		case 3:
+			probability()
 		case 5:
 			fmt.Println("Exiting...")
 		default:
