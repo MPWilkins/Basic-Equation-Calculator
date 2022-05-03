@@ -228,15 +228,19 @@ func probability() {
 	// Get user input for probability and number of trials
 	var probability float64
 	var num_trials float64
+	var dec_places int // May need to be adjusted to float
 
 	// Take input of probability?
 	fmt.Println("Chances that given event occurs? (i.e. rolling the number 3 on a 6 sided die)")
-
 	fmt.Scanln(&probability)
 
 	// take input of trials
 	fmt.Println("How many possible outcomes for the event? (i.e. 6 sided die)")
 	fmt.Scanln(&num_trials)
+
+	fmt.Println("How many decimal places would you like to go to?")
+	fmt.Scanln(&dec_places)
+	
 
 	// Calculate the probability
 	prob_percentage := probability * 100
