@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	// "math"
+	"math"
 )
 
 // Documentation help: https://pkg.go.dev/fmt
@@ -227,14 +227,24 @@ func average() {
 func probability() {
 	// Get user input for probability and number of trials
 	var probability float64
-	var num_trials int
+	var num_trials float64
 
 	// Take input of probability?
-	fmt.Println("What is the probability of success?")
+	fmt.Println("Chances that given event occurs? (i.e. rolling the number 3 on a 6 sided die)")
 
 	fmt.Scanln(&probability)
 
 	// take input of trials
+	fmt.Println("How many possible outcomes for the event? (i.e. 6 sided die)")
+	fmt.Scanln(&num_trials)
+
+	// Calculate the probability
+	prob_percentage := probability * 100
+	fmt.Println("Checkpoint: ", prob_percentage)
+	new_probability := prob_percentage / math.Floor(num_trials)
+
+	// Display the probability
+	fmt.Println("The probability is:", new_probability, "%")
 }
 
 // func quadraticFormula() {
