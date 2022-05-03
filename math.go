@@ -243,8 +243,8 @@ func probability() {
 	fmt.Println("Checkpoint: ", prob_percentage)
 	new_probability := prob_percentage / math.Floor(num_trials)
 
-	// Display the probability
-	fmt.Println("The probability is:", new_probability, "%")
+	// Display the probability, rounded to 2 decimal places
+	fmt.Println("The probability is:", math.Round(new_probability*100)/100, "%")
 }
 
 // func quadraticFormula() {
