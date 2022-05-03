@@ -228,7 +228,7 @@ func probability() {
 	// Get user input for probability and number of trials
 	var probability float64
 	var num_trials float64
-	var dec_places int // May need to be adjusted to float
+	var dec_places float// May need to be adjusted to float
 
 	// Take input of probability?
 	fmt.Println("Chances that given event occurs? (i.e. rolling the number 3 on a 6 sided die)")
@@ -240,15 +240,18 @@ func probability() {
 
 	fmt.Println("How many decimal places would you like to go to?")
 	fmt.Scanln(&dec_places)
+
+	// Use Exponents to calculate the number of decimal places
+	num_dec_places := math.Pow(10, math.Floor(dec_places))
 	
 
 	// Calculate the probability
 	prob_percentage := probability * 100
 	fmt.Println("Checkpoint: ", prob_percentage)
-	new_probability := prob_percentage / math.Floor(num_trials)
+	sol_probability := prob_percentage / math.Floor(num_trials)
 
-	// Display the probability, rounded to 2 decimal places
-	fmt.Println("The probability is:", math.Round(new_probability*100)/100, "%")
+	// Display the probability
+	// fmt.Println("The probability is:", (), "%")
 }
 
 // func quadraticFormula() {
