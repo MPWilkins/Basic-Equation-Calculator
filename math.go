@@ -262,6 +262,16 @@ func quadraticFormula() {
 	// Show equation layout.
 	fmt.Println("x = (-b±√(b²-4ac))/(2a)")
 
+	// Take input for a
+	fmt.Println("Enter the value of a.")
+	fmt.Scanln(&a)
+	// Take input for b
+	fmt.Println("Enter the value of b.")
+	fmt.Scanln(&b)
+	// Take input for c
+	fmt.Println("Enter the value of c.")
+	fmt.Scanln(&c)
+
 
 }
 
