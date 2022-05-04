@@ -228,7 +228,7 @@ func probability() {
 	// Get user input for probability and number of trials
 	var probability float64
 	var num_trials float64
-	var dec_places float// May need to be adjusted to float
+	var dec_places float64
 
 	// Take input of probability?
 	fmt.Println("Chances that given event occurs? (i.e. rolling the number 3 on a 6 sided die)")
@@ -251,7 +251,7 @@ func probability() {
 	sol_probability := prob_percentage / math.Floor(num_trials)
 
 	// Display the probability
-	// fmt.Println("The probability is:", (), "%")
+	fmt.Println("The probability is:", math.Round(sol_probability*num_dec_places)/num_dec_places, "%")
 }
 
 // func quadraticFormula() {
