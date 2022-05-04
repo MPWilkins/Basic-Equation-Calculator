@@ -278,6 +278,10 @@ func quadraticFormula() {
 	// Get the square root of d
 	sqrt_d := math.Sqrt(d)
 
+	// Find the total of both halfs
+	top_half := (-b + sqrt_d)
+	bot_half := (2 * a)
+
 
 }
 
