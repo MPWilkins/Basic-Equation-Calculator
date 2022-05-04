@@ -282,6 +282,8 @@ func quadraticFormula() {
 	top_half := (-b + sqrt_d)
 	bot_half := (2 * a)
 
+	x := top_half / bot_half
+
 
 }
 
