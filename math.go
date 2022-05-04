@@ -240,16 +240,14 @@ func probability() {
 
 	fmt.Println("How many decimal places would you like to go to?")
 	fmt.Scanln(&dec_places)
+	
+	// Calculate the probability
+	prob_percentage := probability * 100
+	sol_probability := prob_percentage / math.Floor(num_trials)
 
 	// Use Exponents to calculate the number of decimal places
 	num_dec_places := math.Pow(10, math.Floor(dec_places))
 	
-
-	// Calculate the probability
-	prob_percentage := probability * 100
-	fmt.Println("Checkpoint: ", prob_percentage)
-	sol_probability := prob_percentage / math.Floor(num_trials)
-
 	// Display the probability
 	fmt.Println("The probability is:", math.Round(sol_probability*num_dec_places)/num_dec_places, "%")
 }
