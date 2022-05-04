@@ -284,7 +284,8 @@ func quadraticFormula() {
 
 	x := top_half / bot_half
 
-
+	// Display the solution
+	fmt.Println("The solution is:", x)
 }
 
 
