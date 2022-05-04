@@ -272,6 +272,9 @@ func quadraticFormula() {
 	fmt.Println("Enter the value of c.")
 	fmt.Scanln(&c)
 
+	// Solve b²-4ac
+	d := math.Pow(b, 2) - (4 * a * c)
+
 
 }
 
