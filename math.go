@@ -275,6 +275,9 @@ func quadraticFormula() {
 	// Solve b²-4ac
 	d := math.Pow(b, 2) - (4 * a * c)
 
+	// Get the square root of d
+	sqrt_d := math.Sqrt(d)
+
 
 }
 
