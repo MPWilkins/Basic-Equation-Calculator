@@ -274,13 +274,21 @@ func quadraticFormula() {
 
 	// Solve b²-4ac
 	d := math.Pow(b, 2) - (4 * a * c)
+	//check what d is
+	fmt.Println("d is:", d)
 
+	// Check if d is negative or not
 	// Get the square root of d
 	sqrt_d := math.Sqrt(d)
+	// check sqrt_d
+	fmt.Println("sqrt_d is:", sqrt_d)
 
 	// Find the total of both halfs
 	top_half := (-b + sqrt_d)
 	bot_half := (2 * a)
+	// check top and bottom half
+	fmt.Println("top_half is:", top_half)
+	fmt.Println("bot_half is:", bot_half)
 
 	x := top_half / bot_half
 
