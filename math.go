@@ -252,12 +252,16 @@ func probability() {
 	fmt.Println("The probability is:", math.Round(sol_probability*num_dec_places)/num_dec_places, "%")
 }
 
-// x = (-b±√(b²-4ac))/(2a)
+// x= (-b±√(b²-4ac))/(2a)
 func quadraticFormula() {
 	// Get user input for a, b, and c
 	var a float64
 	var b float64
 	var c float64
+
+	// Show equation layout.
+	fmt.Println("x = (-b±√(b²-4ac))/(2a)")
+
 
 }
 
