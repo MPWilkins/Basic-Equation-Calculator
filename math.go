@@ -280,6 +280,17 @@ func quadraticFormula() {
 	// Check if d is negative or not
 	if d < 0 {
 		fmt.Println("Unable to obtain root, value is negative.")
+		// alter the value of d to be positive
+
+		// Find the square root of d
+
+		// show case imaginary number for program
+
+		// Find the complex roots of the value as it is negative - implement imaginary number
+
+		// simplify the redical
+
+		// showcase the positive and negative output.
 	} else {
 		// Get the square root of d if not a negative
 	sqrt_d := math.Sqrt(d)
