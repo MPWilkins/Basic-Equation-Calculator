@@ -280,8 +280,8 @@ func quadraticFormula() {
 	// Check if d is negative or not
 	if d < 0 {
 		fmt.Println("Unable to obtain root, value is negative.")
-	} else {}
-	// Get the square root of d if not a negative
+	} else {
+		// Get the square root of d if not a negative
 	sqrt_d := math.Sqrt(d)
 	// check sqrt_d
 	fmt.Println("sqrt_d is:", sqrt_d)
@@ -292,13 +292,18 @@ func quadraticFormula() {
 	top_half_sub := (-b - sqrt_d)
 	bot_half := (2 * a)
 	// check top and bottom half
-	fmt.Println("top_half is:", top_half)
+	fmt.Println("top_half is:", top_half_add)
+	fmt.Println("top_half is:", top_half_sub)
 	fmt.Println("bot_half is:", bot_half)
 
-	x := top_half / bot_half
+	x := top_half_add / bot_half
+	y := top_half_sub / bot_half
 
 	// Display the solution
-	fmt.Println("The solution is:", x)
+	fmt.Println("The solution is for additon is:", x)
+	fmt.Println("The solution is for subtraction is:", y)
+	}
+	
 }
 
 
