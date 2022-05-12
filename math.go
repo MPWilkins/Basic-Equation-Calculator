@@ -281,9 +281,14 @@ func quadraticFormula() {
 	if d < 0 {
 		fmt.Println("Unable to obtain root, value is negative.")
 		// alter the value of d to be positive
-
-		// Find the square root of d
-
+		d *= -1
+		// Find the square root of d if it is a whole number
+		if math.Mod(d, 1) == 0 {
+			sqrt_d := math.Sqrt(d)
+			
+		} else { 
+			// Factor tree for a value of u	
+		}
 		// show case imaginary number for program
 
 		// Find the complex roots of the value as it is negative - implement imaginary number
