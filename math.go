@@ -286,11 +286,15 @@ func quadraticFormula() {
 		// Calculate the square root of d
 		sqrt_d := math.Sqrt(d)
 
+		// Calculate first part of top half
+		top_half_b_prep := b * -1
+
 		// Calculate the bottom half
 		bottom_half := 2 * a
 
-		// Calculate first part of top half
-		top_half_b_prep := b * -1
+		// Get Values of the combined values
+		first_solution := top_half_b_prep / bottom_half
+		second_solution := sqrt_d / bottom_half
 
 
 	} else {
