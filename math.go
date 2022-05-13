@@ -272,6 +272,9 @@ func quadraticFormula() {
 	fmt.Println("Enter the value of c.")
 	fmt.Scanln(&c)
 
+	// For obtaining decimal places
+	dec_places := math.Pow(10, 5)
+
 	// Solve b²-4ac
 	d := math.Pow(b, 2) - (4 * a * c)
 	//check what d is
@@ -279,7 +282,6 @@ func quadraticFormula() {
 
 	// Check if d is negative or not
 	if d < 0 {
-		fmt.Println("Unable to obtain root, value is negative.")
 		// alter the value of d to be positive
 		d *= -1
 		
@@ -298,8 +300,8 @@ func quadraticFormula() {
 
 		// Display answers with an i after the second solution
 		fmt.Println("The Solutions are:")
-		fmt.Println("x =", first_solution, "+", second_solution, "i")
-		fmt.Println("x =", first_solution, "-", second_solution, "i")
+		fmt.Println("x =", math.Round(first_solution*dec_places)/dec_places, "+", math.Round(second_solution*dec_places)/dec_places, "i")
+		fmt.Println("x =", math.Round(first_solution*dec_places)/dec_places, "-", math.Round(second_solution*dec_places)/dec_places, "i")
 
 
 	} else {
@@ -322,8 +324,8 @@ func quadraticFormula() {
 	y := top_half_sub / bot_half
 
 	// Display the solution
-	fmt.Println("The solution is for additon is:", x)
-	fmt.Println("The solution is for subtraction is:", y)
+	fmt.Println("The solution is for additon is:", math.Round(x*dec_places)/dec_places)
+	fmt.Println("The solution is for subtraction is:", math.Round(y*dec_places)/dec_places)
 	}
 	
 }
