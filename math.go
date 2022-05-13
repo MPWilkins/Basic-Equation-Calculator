@@ -296,6 +296,11 @@ func quadraticFormula() {
 		first_solution := top_half_b_prep / bottom_half
 		second_solution := sqrt_d / bottom_half
 
+		// Display answers with an i after the second solution
+		fmt.Println("The Solutions are:")
+		fmt.Println("x =", first_solution, "+", second_solution, "i")
+		fmt.Println("x =", first_solution, "-", second_solution, "i")
+
 
 	} else {
 		// Get the square root of d if not a negative
