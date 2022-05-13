@@ -282,20 +282,17 @@ func quadraticFormula() {
 		fmt.Println("Unable to obtain root, value is negative.")
 		// alter the value of d to be positive
 		d *= -1
-		// Find the square root of d if it is a whole number
-		if math.Mod(d, 1) == 0 {
-			sqrt_d := math.Sqrt(d)
-			
-		} else { 
-			// Factor tree for a value of u	
-		}
-		// show case imaginary number for program
+		
+		// Calculate the square root of d
+		sqrt_d := math.Sqrt(d)
 
-		// Find the complex roots of the value as it is negative - implement imaginary number
+		// Calculate the bottom half
+		bottom_half := 2 * a
 
-		// simplify the redical
+		// Calculate first part of top half
+		top_half_b_prep := b * -1
 
-		// showcase the positive and negative output.
+
 	} else {
 		// Get the square root of d if not a negative
 	sqrt_d := math.Sqrt(d)
