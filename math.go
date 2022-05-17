@@ -157,8 +157,7 @@ func fractionSimplifier() {
 			fmt.Println("Solution: ", numerator_abs * -1, "/", denominator_abs)
 		} else {
 			fmt.Println("Solution: ", final_numerator, "/", final_denominator)
-		}
-		
+		}		
 	case "/":
 		// Flip second fraction then multiply numerators and denominators
 		new_numerator := numer1 * denom2
@@ -327,7 +326,6 @@ func quadraticFormula() {
 	fmt.Println("The solution is for additon is:", math.Round(x*dec_places)/dec_places)
 	fmt.Println("The solution is for subtraction is:", math.Round(y*dec_places)/dec_places)
 	}
-	
 }
 
 
