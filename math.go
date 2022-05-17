@@ -333,7 +333,9 @@ func quadraticFormula() {
 1. Pre-Algebra / Elementary Algebra
 2. Intermediate Algebra / Coordinate Geometry 
 3. Plane Geometry
-4. Trigonometry */
+4. Trigonometry 
+
+https://www.collegeraptor.com/getting-in/articles/act-sat/5-critical-formulas-you-must-know-for-the-act/ */
 func main() {
 	var calc_choice int 
 	// Select which function to use:
