@@ -196,7 +196,7 @@ func fractionSimplifier() {
 	} 
 }
 
-// Pre Alegbra/ Elementary Algebra functions
+// Pre-Algebra / Elementary Algebra
 // For the average allow a maximum of 50 entries
 func average() {
 	// Initialize variables
@@ -357,7 +357,19 @@ func basic_Algebra() {
 	}
 }
 
-// Intermediate Algerbra and Geometry
+// Intermediate Algebra / Coordinate Geometry
+func distance(){
+	// Get user input
+	var x1 float64
+	var y1 float64
+	var x2 float64
+	var y2 float64
+
+	// Show equation layout.
+	fmt.Println("d=√(x₁ – x₂)² + (y₁ – y₂)²")
+
+	fmt.Println("(x₁, y₁), (x₂, y₂)")
+}
 
 func algebra_Geo(){
 	var calc_choice int
