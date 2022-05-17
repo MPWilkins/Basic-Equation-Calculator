@@ -328,16 +328,9 @@ func quadraticFormula() {
 	}
 }
 
-
-/* Main will be used to call each section as necessary ranging from:
-1. Pre-Algebra / Elementary Algebra
-2. Intermediate Algebra / Coordinate Geometry 
-3. Plane Geometry
-4. Trigonometry 
-
-https://www.collegeraptor.com/getting-in/articles/act-sat/5-critical-formulas-you-must-know-for-the-act/ */
-func main() {
+func basic_Algebra() {
 	var calc_choice int 
+
 	// Select which function to use:
 	fmt.Println("Which calculator would you like to use?")
 	fmt.Println("1. Fraction Calculator")
@@ -360,6 +353,32 @@ func main() {
 			fmt.Println("Exiting...")
 		default:
 			fmt.Println("Invalid choice, please try again.")
-			main()
+			basic_Algebra()
 	}
+}
+
+// Intermediate Algerbra and Geometry
+
+func algebra_Geo(){
+	var calc_choice int
+
+	// Select a calculator:
+	fmt.Println("Which calculator would you like to use?")
+	fmt.Println("1. Distance Calculator")
+	fmt.Println("2. Slope Calculator")
+	fmt.Println("3. Slope Intercept Calculator")
+	fmt.Println("4. Midpoint formula")
+	fmt.Println("5. Exit")
+}
+
+/* Main will be used to call each section as necessary ranging from:
+1. Pre-Algebra / Elementary Algebra
+2. Intermediate Algebra / Coordinate Geometry 
+3. Plane Geometry
+4. Trigonometry 
+
+https://www.collegeraptor.com/getting-in/articles/act-sat/5-critical-formulas-you-must-know-for-the-act/ */
+
+func main() {
+	basic_Algebra()
 }
