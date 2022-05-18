@@ -381,7 +381,9 @@ func distance(){
 	// Calculate the distance
 	distance := math.Sqrt(math.Pow(x1-x2, 2) + math.Pow(y1-y2, 2))
 
-	fmt.Println("The distance is:", distance)
+	round_distance := math.Round(distance * 1000) / 1000
+
+	fmt.Println("The distance is:", round_distance)
 }
 
 func algebra_Geo(){
@@ -394,6 +396,18 @@ func algebra_Geo(){
 	fmt.Println("3. Slope Intercept Calculator")
 	fmt.Println("4. Midpoint formula")
 	fmt.Println("5. Exit")
+
+	fmt.Scanln(&calc_choice)
+
+	switch calc_choice {
+		case 1:
+			distance()
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			fmt.Println("Exiting...")
+	}
 }
 
 /* Main will be used to call each section as necessary ranging from:
@@ -405,5 +419,25 @@ func algebra_Geo(){
 https://www.collegeraptor.com/getting-in/articles/act-sat/5-critical-formulas-you-must-know-for-the-act/ */
 
 func main() {
-	basic_Algebra()
+	//Group of calculators
+	var calc_choice int
+
+
+	// Select a calculator:
+	fmt.Println("Which calculator would you like to use?")
+	fmt.Println("1. Pre-Algebra / Elementary Algebra")
+	fmt.Println("2. Intermediate Algebra / Coordinate Geometry")
+	fmt.Println("5. Exit")
+
+	fmt.Scanln(&calc_choice)
+
+	switch calc_choice {
+		case 1:
+			basic_Algebra()
+		case 2:
+			algebra_Geo()
+		case 5:
+			fmt.Println("Exiting...")
+	}
+
 }
