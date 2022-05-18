@@ -381,7 +381,7 @@ func distance(){
 	// Calculate the distance
 	distance := math.Sqrt(math.Pow(x1-x2, 2) + math.Pow(y1-y2, 2))
 
-	round_distance := math.Round(distance * 1000) / 1000
+	round_distance := math.Round(distance * 100000) / 100000
 
 	fmt.Println("The distance is:", round_distance)
 }
