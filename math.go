@@ -369,6 +369,19 @@ func distance(){
 	fmt.Println("d=√(x₁ – x₂)² + (y₁ – y₂)²")
 
 	fmt.Println("(x₁, y₁), (x₂, y₂)")
+	fmt.Println("Enter the value of x₁.")
+	fmt.Scanln(&x1)
+	fmt.Println("Enter the value of y₁.")
+	fmt.Scanln(&y1)
+	fmt.Println("Enter the value of x₂.")
+	fmt.Scanln(&x2)
+	fmt.Println("Enter the value of y₂.")
+	fmt.Scanln(&y2)
+
+	// Calculate the distance
+	distance := math.Sqrt(math.Pow(x1-x2, 2) + math.Pow(y1-y2, 2))
+
+	fmt.Println("The distance is:", distance)
 }
 
 func algebra_Geo(){
