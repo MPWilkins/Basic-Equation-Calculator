@@ -358,6 +358,7 @@ func basic_Algebra() {
 }
 
 // Intermediate Algebra / Coordinate Geometry
+// Distance Calculator - d=√(x₁ – x₂)² + (y₁ – y₂)²
 func distance(){
 	// Get user input
 	var x1 float64
@@ -384,6 +385,34 @@ func distance(){
 	round_distance := math.Round(distance * 100000) / 100000
 
 	fmt.Println("The distance is:", round_distance)
+}
+
+// Slope Calculator - y₂ – y₁ /  x₂ – x₁
+func slope(){
+	// Get user input
+	var x1 float64
+	var y1 float64
+	var x2 float64
+	var y2 float64
+
+	// Show equation layout.
+	fmt.Println("y₂ – y₁ /  x₂ – x₁")
+
+	fmt.Println("(x₁, y₁), (x₂, y₂)")
+	fmt.Println("Enter the value of x₁.")
+	fmt.Scanln(&x1)
+	fmt.Println("Enter the value of y₁.")
+	fmt.Scanln(&y1)
+	fmt.Println("Enter the value of x₂.")
+	fmt.Scanln(&x2)
+	fmt.Println("Enter the value of y₂.")
+	fmt.Scanln(&y2)
+
+	// Calculate the slope
+	y_slope := y2 - y1
+	x_slope := x2 - x1
+
+	fmt.Println("The slope is:", y_slope, "/", x_slope)
 }
 
 func algebra_Geo(){
