@@ -423,7 +423,7 @@ func algebra_Geo(){
 	fmt.Println("1. Distance Calculator")
 	fmt.Println("2. Slope Calculator")
 	fmt.Println("3. Slope Intercept Calculator")
-	fmt.Println("4. Midpoint formula")
+	fmt.Println("4. Midpoint Calculator")
 	fmt.Println("5. Exit")
 
 	fmt.Scanln(&calc_choice)
