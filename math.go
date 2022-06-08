@@ -28,6 +28,12 @@ func lcd(a, b int) int {
 	return (a * b) / gcd(a, b)
 }
 
+// Number of Decimal places for a solution
+/* func round(num float64) float64 {
+	num_dec_places float64
+	return math.Round(num * num_dec) / 100000
+} */
+
 // Basic fraction formula and simplification
 func fractionSimplifier() {
 	var numer1, numer2, denom1, denom2 int
