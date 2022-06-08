@@ -428,6 +428,11 @@ func slope(){
 	fmt.Println("The final slope when simplified is (Rounded to 5 decimal places):", round_slope)
 }
 
+// Slope Intercept Calculator - y = mx + b
+func slope_intercept(){
+	
+}
+
 func algebra_Geo(){
 	var calc_choice int
 
