@@ -28,7 +28,7 @@ func lcd(a, b int) int {
 	return (a * b) / gcd(a, b)
 }
 
-// Number of Decimal places for a solution
+// To do later: Number of Decimal places for a solution
 /* func round(num float64) float64 {
 	num_dec_places float64
 	return math.Round(num * num_dec) / 100000
