@@ -413,6 +413,13 @@ func slope(){
 	x_slope := x2 - x1
 
 	fmt.Println("The slope is:", y_slope, "/", x_slope)
+
+	// Reduce slope to to a decimal
+	slope := y_slope / x_slope
+
+	// make slope only have five decimal places
+	round_slope := math.Round(slope * 100000) / 100000
+	fmt.Println("The final slope when simplified is (Rounded to 5 decimal places):", round_slope)
 }
 
 func algebra_Geo(){
@@ -432,6 +439,7 @@ func algebra_Geo(){
 		case 1:
 			distance()
 		case 2:
+			slope()
 		case 3:
 		case 4:
 		case 5:
