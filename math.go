@@ -5,8 +5,6 @@ import (
 	"math"
 )
 
-// Documentation help: https://pkg.go.dev/fmt
-
 // Absolute Value for ints
 func abs(x int) int {
 	if x < 0 {
