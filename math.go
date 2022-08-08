@@ -27,6 +27,7 @@ func lcd(a, b int) int {
 }
 
 // To do later: Number of Decimal places for a solution
+// Look at the Probability Calculator for the proof of concept
 /* func round(num float64) float64 {
 	num_dec_places float64
 	return math.Round(num * num_dec) / 100000
